@@ -13,6 +13,9 @@ class ListChai(models.Model):
     image=models.ImageField(upload_to='chais/')
     date_added=models.DateTimeField(default=timezone.now)
     type=models.CharField(max_length=2,choices=CHAI_TYPE_CHOICE)
+    description=models.TextField(default='')
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0.0)  # Default value of 0.0
+
 
 
 

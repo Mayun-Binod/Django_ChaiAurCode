@@ -1,14 +1,13 @@
 {% extends 'layout.html' %}
 
 {% block title %}
- All_Chai Page
+ chai detail cart Page
 {% endblock %}
 
 {% block content %}
 <nav>This is our navbar</nav>
-<h1>This is All_Chai page</h1>
+<h1>This is detail Chai cart  page</h1>
 <div class="grid grid-cols-3 gap-4 m-4">
-{% for chai in chais %}
 <div class="chai-item bg-blue-800 p-5">
     <img class="rounded shadow-lg" src="{{chai.image.url}}" alt="">
     <h3 class="text-2xl font-bold p-5 rounded">{{chai.name}}-{{chai.price}}</h3>
@@ -16,6 +15,5 @@
         <button type="button" class="inline-flex items-center w-[100%] justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:rinf-2 focus:ring-offset-2 focus:rinf-orange-500">{{chai.type}}-{{chai.id}}</button>
     </a>
 </div>
-{% endfor %}
 </div>
 {% endblock %}
